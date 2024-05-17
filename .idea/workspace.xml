@@ -74,7 +74,7 @@
       <module name="Proyecto" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.Backend.*" />
+          <option name="PATTERN" value="org.viajes.Backend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
