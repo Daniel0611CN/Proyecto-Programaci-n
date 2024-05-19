@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS travel (
+id int AUTO_INCREMENT PRIMARY KEY,
+arrivalDate varchar(20),
+departureDate varchar(20),
+numberPassengers int,
+userId int,
+price DECIMAL(10, 2),
+categoryId int,
+arrivalLocationId int,
+departureLocationId int,
+FOREIGN KEY (categoryId) REFERENCES category(id),
+FOREIGN KEY (arrivalLocationId) REFERENCES location(id),
+FOREIGN KEY (departureLocationId) REFERENCES location(id)
+);

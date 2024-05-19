@@ -1,0 +1,4 @@
+create table transport(
+id int AUTO_INCREMENT PRIMARY KEY ,
+name VARCHAR(50)
+);

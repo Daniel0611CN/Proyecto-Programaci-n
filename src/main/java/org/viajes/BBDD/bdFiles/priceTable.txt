@@ -1,0 +1,10 @@
+create table price(
+id int AUTO_INCREMENT PRIMARY KEY ,
+departureLocationId int,
+arrivalLocationId int,
+planePrice decimal(10,2),
+boatPrice decimal(10,2),
+trainPrice decimal(10,2),
+FOREIGN KEY (departureLocationId) REFERENCES location(id),
+FOREIGN KEY (arrivalLocationId) REFERENCES location(id)
+);

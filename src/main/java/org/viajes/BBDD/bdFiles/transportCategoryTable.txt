@@ -1,0 +1,7 @@
+create table transportCategory(
+id int AUTO_INCREMENT PRIMARY KEY ,
+transportId int,
+categoryId int,
+FOREIGN KEY (transportId) REFERENCES transport(id),
+FOREIGN KEY (categoryId) REFERENCES category(id)
+);

@@ -1,0 +1,5 @@
+create table location(
+id int AUTO_INCREMENT PRIMARY KEY ,
+name VARCHAR(50),
+country VARCHAR(50)
+);

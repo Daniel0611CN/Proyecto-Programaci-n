@@ -1,0 +1,7 @@
+create table transportExtra(
+id int AUTO_INCREMENT PRIMARY KEY ,
+transportId int,
+extraId int,
+FOREIGN KEY (transportId) REFERENCES transport(id),
+FOREIGN KEY (extraId) REFERENCES extra(id)
+);

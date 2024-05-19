@@ -1,0 +1,5 @@
+create table extra(
+id int AUTO_INCREMENT PRIMARY KEY ,
+name VARCHAR(50),
+price double
+);
