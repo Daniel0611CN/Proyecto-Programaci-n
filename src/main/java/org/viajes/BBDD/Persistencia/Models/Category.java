@@ -1,41 +1,40 @@
-package org.viajes.BBDD.Persistencia.Models;
+package persistance.models;
 
 public class Category {
-    private Integer id;
-    private String name;
-    private double increment;
+	private Integer id;
+	private String name;
+	private double increment;
+	
+	public Category(Integer id, String name, double increment) {
+		this.setId(id);
+		this.setName(name);
+		this.setIncrement(increment);
+	}
+	public Category() {
+		super();
+	}
+	
+	public double getIncrement() {
+		return increment;
+	}
 
-    public Category(Integer id, String name, double increment) {
-        this.setId(id);
-        this.setName(name);
-        this.setIncrement(increment);
-    }
-    public Category() {
-        super();
-    }
+	public void setIncrement(double increment) {
+		this.increment = increment;
+	}
 
-    public double getIncrement() {
-        return increment;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setIncrement(double increment) {
-        this.increment = increment;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 }
-

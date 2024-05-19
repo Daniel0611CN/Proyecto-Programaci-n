@@ -1,41 +1,41 @@
-package org.viajes.BBDD.Persistencia.Models;
+package persistance.models;
 
 public class Extra {
-    private Integer id;
-    private String name;
-    private double price;
+	private Integer id;
+	private String name;
+	private double price;
+	
+	public Extra(Integer id, String name, double price) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+	
+	public Extra() {
+		super();
+	}
 
-    public Extra(Integer id, String name, double price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public Extra() {
-        super();
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public double getPrice() {
+		return price;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
+	public void setPrice(double price) {
+		this.price = price;
+	}
 }

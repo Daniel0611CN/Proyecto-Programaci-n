@@ -1,76 +1,75 @@
-package org.viajes.BBDD.Persistencia.Models;
+package persistance.models;
 
 public class Price {
-    private Integer id;
-    private Integer departureLocationId;
-    private Integer arrivalLocationId;
-    private double planePrice;
-    private double trainPrice;
-    private double boatPrice;
+	private Integer id;
+	private Integer departureLocationId;
+	private Integer arrivalLocationId;
+	private double planePrice;
+	private double trainPrice;
+	private double boatPrice;
+	
+
+	public Price(Integer id, Integer departureLocationId, Integer arrivalLocationId, double planePrice,
+			double trainPrice, double boatPrice) {
+		super();
+		this.id = id;
+		this.departureLocationId = departureLocationId;
+		this.arrivalLocationId = arrivalLocationId;
+		this.planePrice = planePrice;
+		this.trainPrice = trainPrice;
+		this.boatPrice = boatPrice;
+	}
+
+	public Price() {
+		super();
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 
-    public Price(Integer id, Integer departureLocationId, Integer arrivalLocationId, double planePrice,
-                 double trainPrice, double boatPrice) {
-        super();
-        this.id = id;
-        this.departureLocationId = departureLocationId;
-        this.arrivalLocationId = arrivalLocationId;
-        this.planePrice = planePrice;
-        this.trainPrice = trainPrice;
-        this.boatPrice = boatPrice;
-    }
+	public double getPlanePrice() {
+		return planePrice;
+	}
 
-    public Price() {
-        super();
-    }
+	public void setPlanePrice(double planePrice) {
+		this.planePrice = planePrice;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public double getTrainPrice() {
+		return trainPrice;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setTrainPrice(double trainPrice) {
+		this.trainPrice = trainPrice;
+	}
 
+	public double getBoatPrice() {
+		return boatPrice;
+	}
 
-    public double getPlanePrice() {
-        return planePrice;
-    }
+	public void setBoatPrice(double boatPrice) {
+		this.boatPrice = boatPrice;
+	}
 
-    public void setPlanePrice(double planePrice) {
-        this.planePrice = planePrice;
-    }
+	public Integer getDepartureLocationId() {
+		return departureLocationId;
+	}
 
-    public double getTrainPrice() {
-        return trainPrice;
-    }
+	public void setDepartureLocationId(Integer departureLocationId) {
+		this.departureLocationId = departureLocationId;
+	}
 
-    public void setTrainPrice(double trainPrice) {
-        this.trainPrice = trainPrice;
-    }
+	public Integer getArrivalLocationId() {
+		return arrivalLocationId;
+	}
 
-    public double getBoatPrice() {
-        return boatPrice;
-    }
-
-    public void setBoatPrice(double boatPrice) {
-        this.boatPrice = boatPrice;
-    }
-
-    public Integer getDepartureLocationId() {
-        return departureLocationId;
-    }
-
-    public void setDepartureLocationId(Integer departureLocationId) {
-        this.departureLocationId = departureLocationId;
-    }
-
-    public Integer getArrivalLocationId() {
-        return arrivalLocationId;
-    }
-
-    public void setArrivalLocationId(Integer arrivalLocationId) {
-        this.arrivalLocationId = arrivalLocationId;
-    }
+	public void setArrivalLocationId(Integer arrivalLocationId) {
+		this.arrivalLocationId = arrivalLocationId;
+	}
 }
-

@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS travel (
 id int AUTO_INCREMENT PRIMARY KEY,
 arrivalDate varchar(20),
 departureDate varchar(20),
-numberPassengers int,
+numberPassengers int, 
 userId int,
 price DECIMAL(10, 2),
 categoryId int,

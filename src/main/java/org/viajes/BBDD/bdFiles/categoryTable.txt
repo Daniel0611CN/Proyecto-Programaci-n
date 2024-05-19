@@ -1,5 +1,5 @@
 create table category(
 id int AUTO_INCREMENT PRIMARY KEY ,
 name VARCHAR(50),
-increment decimal(4,2)
+increment decimal(4,2)  
 );

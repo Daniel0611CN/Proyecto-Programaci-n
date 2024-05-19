@@ -1,44 +1,43 @@
-package org.viajes.BBDD.Persistencia.Models;
+package persistance.models;
 
 public class TransportExtra {
-    private Integer id;
-    private Integer transportId;
-    private Integer extraId;
+	private Integer id;
+	private Integer transportId;
+	private Integer extraId;
+	
+	public TransportExtra(Integer id, Integer transportId, Integer extraId) {
+		super();
+		this.id = id;
+		this.transportId = transportId;
+		this.extraId = extraId;
+	}
+	
+	public TransportExtra() {
+		super();
+	}
 
-    public TransportExtra(Integer id, Integer transportId, Integer extraId) {
-        super();
-        this.id = id;
-        this.transportId = transportId;
-        this.extraId = extraId;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public TransportExtra() {
-        super();
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public Integer getTransportId() {
+		return transportId;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setTransportId(Integer transportId) {
+		this.transportId = transportId;
+	}
 
-    public Integer getTransportId() {
-        return transportId;
-    }
+	public Integer getExtraId() {
+		return extraId;
+	}
 
-    public void setTransportId(Integer transportId) {
-        this.transportId = transportId;
-    }
-
-    public Integer getExtraId() {
-        return extraId;
-    }
-
-    public void setExtraId(Integer extraId) {
-        this.extraId = extraId;
-    }
-
+	public void setExtraId(Integer extraId) {
+		this.extraId = extraId;
+	}
+	
 }
-

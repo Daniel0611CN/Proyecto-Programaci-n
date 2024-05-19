@@ -1106,7 +1106,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb3_spanish2_ci</CollationName>
     </schema>
     <schema id="315" parent="1" name="traveldata">
-      <LastIntrospectionLocalTimestamp>2024-05-17.18:52:19</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-19.10:18:39</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="316" parent="1" name="Daniel">
@@ -1147,213 +1147,215 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="325" parent="315" name="registreruser">
+    <table id="325" parent="315" name="transport">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="326" parent="315" name="transport">
+    <table id="326" parent="315" name="transportcategory">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="327" parent="315" name="transportcategory">
+    <table id="327" parent="315" name="transportextra">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="328" parent="315" name="transportextra">
+    <table id="328" parent="315" name="travel">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="329" parent="315" name="travel">
+    <table id="329" parent="315" name="travelextra">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="330" parent="315" name="travelextra">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <column id="331" parent="321" name="id_category">
+    <column id="330" parent="321" name="id_category">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="332" parent="321" name="name">
+    <column id="331" parent="321" name="name">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="333" parent="321" name="increment">
+    <column id="332" parent="321" name="increment">
       <DasType>decimal(4,2 digit)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="334" parent="321" name="PRIMARY">
+    <index id="333" parent="321" name="PRIMARY">
       <ColNames>id_category</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="335" parent="321" name="PRIMARY">
+    <key id="334" parent="321" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="336" parent="322" name="id_extra">
+    <column id="335" parent="322" name="id_extra">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="337" parent="322" name="name">
+    <column id="336" parent="322" name="name">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="338" parent="322" name="price">
+    <column id="337" parent="322" name="price">
       <DasType>double|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="339" parent="322" name="PRIMARY">
+    <index id="338" parent="322" name="PRIMARY">
       <ColNames>id_extra</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="340" parent="322" name="PRIMARY">
+    <key id="339" parent="322" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="341" parent="323" name="id_location">
+    <column id="340" parent="323" name="id_location">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="342" parent="323" name="name">
+    <column id="341" parent="323" name="name">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="343" parent="323" name="country">
+    <column id="342" parent="323" name="country">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="344" parent="323" name="PRIMARY">
+    <index id="343" parent="323" name="PRIMARY">
       <ColNames>id_location</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="345" parent="323" name="PRIMARY">
+    <key id="344" parent="323" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="346" parent="324" name="id_price">
+    <column id="345" parent="324" name="id_price">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="347" parent="324" name="id_arrival">
+    <column id="346" parent="324" name="id_arrival">
       <DasType>int|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="348" parent="324" name="id_departure">
+    <column id="347" parent="324" name="id_departure">
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="349" parent="324" name="plane_price">
+    <column id="348" parent="324" name="plane_price">
       <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="350" parent="324" name="boat_price">
+    <column id="349" parent="324" name="boat_price">
       <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="351" parent="324" name="train_price">
+    <column id="350" parent="324" name="train_price">
       <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>6</Position>
     </column>
-    <foreign-key id="352" parent="324" name="price_ibfk_1">
+    <foreign-key id="351" parent="324" name="price_ibfk_1">
       <ColNames>id_arrival</ColNames>
       <RefColNames>id_location</RefColNames>
       <RefTableName>location</RefTableName>
     </foreign-key>
-    <foreign-key id="353" parent="324" name="price_ibfk_2">
+    <foreign-key id="352" parent="324" name="price_ibfk_2">
       <ColNames>id_departure</ColNames>
       <RefColNames>id_location</RefColNames>
       <RefTableName>location</RefTableName>
     </foreign-key>
-    <index id="354" parent="324" name="PRIMARY">
+    <index id="353" parent="324" name="PRIMARY">
       <ColNames>id_price</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="355" parent="324" name="id_arrival">
+    <index id="354" parent="324" name="id_arrival">
       <ColNames>id_arrival</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="356" parent="324" name="id_departure">
+    <index id="355" parent="324" name="id_departure">
       <ColNames>id_departure</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="357" parent="324" name="PRIMARY">
+    <key id="356" parent="324" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="358" parent="325" name="id_user">
+    <column id="357" parent="325" name="id_transport">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="359" parent="325" name="name">
+    <column id="358" parent="325" name="name">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="360" parent="325" name="sourname">
-      <DasType>varchar(50)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="361" parent="325" name="birthdate">
-      <DasType>date|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="362" parent="325" name="email">
-      <DasType>varchar(50)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <column id="363" parent="325" name="telephone">
-      <DasType>varchar(50)|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <index id="364" parent="325" name="PRIMARY">
-      <ColNames>id_user</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="365" parent="325" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="366" parent="326" name="id_transport">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="367" parent="326" name="name">
-      <DasType>varchar(50)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <index id="368" parent="326" name="PRIMARY">
+    <index id="359" parent="325" name="PRIMARY">
       <ColNames>id_transport</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
+    </index>
+    <key id="360" parent="325" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="361" parent="326" name="id_transportCategory">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="362" parent="326" name="id_transport">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="363" parent="326" name="id_category">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="364" parent="326" name="transportcategory_ibfk_1">
+      <ColNames>id_transport</ColNames>
+      <RefColNames>id_transport</RefColNames>
+      <RefTableName>transport</RefTableName>
+    </foreign-key>
+    <foreign-key id="365" parent="326" name="transportcategory_ibfk_2">
+      <ColNames>id_category</ColNames>
+      <RefColNames>id_category</RefColNames>
+      <RefTableName>category</RefTableName>
+    </foreign-key>
+    <index id="366" parent="326" name="PRIMARY">
+      <ColNames>id_transportCategory</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="367" parent="326" name="id_transport">
+      <ColNames>id_transport</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="368" parent="326" name="id_category">
+      <ColNames>id_category</ColNames>
+      <Type>btree</Type>
     </index>
     <key id="369" parent="326" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="370" parent="327" name="id_transportCategory">
+    <column id="370" parent="327" name="id_transportExtra">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
@@ -1363,22 +1365,22 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DasType>int|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="372" parent="327" name="id_category">
+    <column id="372" parent="327" name="id_extra">
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <foreign-key id="373" parent="327" name="transportcategory_ibfk_1">
+    <foreign-key id="373" parent="327" name="transportextra_ibfk_1">
       <ColNames>id_transport</ColNames>
       <RefColNames>id_transport</RefColNames>
       <RefTableName>transport</RefTableName>
     </foreign-key>
-    <foreign-key id="374" parent="327" name="transportcategory_ibfk_2">
-      <ColNames>id_category</ColNames>
-      <RefColNames>id_category</RefColNames>
-      <RefTableName>category</RefTableName>
+    <foreign-key id="374" parent="327" name="transportextra_ibfk_2">
+      <ColNames>id_extra</ColNames>
+      <RefColNames>id_extra</RefColNames>
+      <RefTableName>extra</RefTableName>
     </foreign-key>
     <index id="375" parent="327" name="PRIMARY">
-      <ColNames>id_transportCategory</ColNames>
+      <ColNames>id_transportExtra</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -1386,8 +1388,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <ColNames>id_transport</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="377" parent="327" name="id_category">
-      <ColNames>id_category</ColNames>
+    <index id="377" parent="327" name="id_extra">
+      <ColNames>id_extra</ColNames>
       <Type>btree</Type>
     </index>
     <key id="378" parent="327" name="PRIMARY">
@@ -1395,162 +1397,120 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="379" parent="328" name="id_transportExtra">
+    <column id="379" parent="328" name="id_travel">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="380" parent="328" name="id_transport">
-      <DasType>int|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="381" parent="328" name="id_extra">
-      <DasType>int|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <foreign-key id="382" parent="328" name="transportextra_ibfk_1">
-      <ColNames>id_transport</ColNames>
-      <RefColNames>id_transport</RefColNames>
-      <RefTableName>transport</RefTableName>
-    </foreign-key>
-    <foreign-key id="383" parent="328" name="transportextra_ibfk_2">
-      <ColNames>id_extra</ColNames>
-      <RefColNames>id_extra</RefColNames>
-      <RefTableName>extra</RefTableName>
-    </foreign-key>
-    <index id="384" parent="328" name="PRIMARY">
-      <ColNames>id_transportExtra</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="385" parent="328" name="id_transport">
-      <ColNames>id_transport</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="386" parent="328" name="id_extra">
-      <ColNames>id_extra</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="387" parent="328" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="388" parent="329" name="id_travel">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="389" parent="329" name="arrival_date">
+    <column id="380" parent="328" name="arrival_date">
       <DasType>date|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="390" parent="329" name="departure_date">
+    <column id="381" parent="328" name="departure_date">
       <DasType>date|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="391" parent="329" name="id_price">
+    <column id="382" parent="328" name="id_price">
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="392" parent="329" name="id_category">
+    <column id="383" parent="328" name="id_category">
       <DasType>int|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="393" parent="329" name="id_departure">
+    <column id="384" parent="328" name="id_departure">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="394" parent="329" name="id_arrival">
+    <column id="385" parent="328" name="id_arrival">
       <DasType>int|0s</DasType>
       <Position>7</Position>
     </column>
-    <foreign-key id="395" parent="329" name="travel_ibfk_1">
+    <foreign-key id="386" parent="328" name="travel_ibfk_1">
       <ColNames>id_price</ColNames>
       <RefColNames>id_price</RefColNames>
       <RefTableName>price</RefTableName>
     </foreign-key>
-    <foreign-key id="396" parent="329" name="travel_ibfk_2">
+    <foreign-key id="387" parent="328" name="travel_ibfk_2">
       <ColNames>id_category</ColNames>
       <RefColNames>id_category</RefColNames>
       <RefTableName>category</RefTableName>
     </foreign-key>
-    <foreign-key id="397" parent="329" name="travel_ibfk_3">
+    <foreign-key id="388" parent="328" name="travel_ibfk_3">
       <ColNames>id_departure</ColNames>
       <RefColNames>id_location</RefColNames>
       <RefTableName>location</RefTableName>
     </foreign-key>
-    <foreign-key id="398" parent="329" name="travel_ibfk_4">
+    <foreign-key id="389" parent="328" name="travel_ibfk_4">
       <ColNames>id_arrival</ColNames>
       <RefColNames>id_location</RefColNames>
       <RefTableName>location</RefTableName>
     </foreign-key>
-    <index id="399" parent="329" name="PRIMARY">
+    <index id="390" parent="328" name="PRIMARY">
       <ColNames>id_travel</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="400" parent="329" name="id_price">
+    <index id="391" parent="328" name="id_price">
       <ColNames>id_price</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="401" parent="329" name="id_category">
+    <index id="392" parent="328" name="id_category">
       <ColNames>id_category</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="402" parent="329" name="id_departure">
+    <index id="393" parent="328" name="id_departure">
       <ColNames>id_departure</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="403" parent="329" name="id_arrival">
+    <index id="394" parent="328" name="id_arrival">
       <ColNames>id_arrival</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="404" parent="329" name="PRIMARY">
+    <key id="395" parent="328" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="405" parent="330" name="id_travelExtra">
+    <column id="396" parent="329" name="id_travelExtra">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="406" parent="330" name="id_extra">
+    <column id="397" parent="329" name="id_extra">
       <DasType>int|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="407" parent="330" name="id_transport">
+    <column id="398" parent="329" name="id_transport">
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <foreign-key id="408" parent="330" name="travelextra_ibfk_1">
+    <foreign-key id="399" parent="329" name="travelextra_ibfk_1">
       <ColNames>id_extra</ColNames>
       <RefColNames>id_extra</RefColNames>
       <RefTableName>extra</RefTableName>
     </foreign-key>
-    <foreign-key id="409" parent="330" name="travelextra_ibfk_2">
+    <foreign-key id="400" parent="329" name="travelextra_ibfk_2">
       <ColNames>id_transport</ColNames>
       <RefColNames>id_transport</RefColNames>
       <RefTableName>transport</RefTableName>
     </foreign-key>
-    <index id="410" parent="330" name="PRIMARY">
+    <index id="401" parent="329" name="PRIMARY">
       <ColNames>id_travelExtra</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="411" parent="330" name="id_extra">
+    <index id="402" parent="329" name="id_extra">
       <ColNames>id_extra</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="412" parent="330" name="id_transport">
+    <index id="403" parent="329" name="id_transport">
       <ColNames>id_transport</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="413" parent="330" name="PRIMARY">
+    <key id="404" parent="329" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

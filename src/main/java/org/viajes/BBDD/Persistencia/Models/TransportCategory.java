@@ -1,43 +1,43 @@
-package org.viajes.BBDD.Persistencia.Models;
+package persistance.models;
 
 public class TransportCategory {
-    private Integer id;
-    private Integer transportId;
-    private Integer categoryId;
+	private Integer id;
+	private Integer transportId;
+	private Integer categoryId;
+	
+	public TransportCategory(Integer id, Integer transportId, Integer categoryId) {
+		super();
+		this.id = id;
+		this.transportId = transportId;
+		this.categoryId = categoryId;
+	}
+	
+	public TransportCategory() {
+		super();
+	}
 
-    public TransportCategory(Integer id, Integer transportId, Integer categoryId) {
-        super();
-        this.id = id;
-        this.transportId = transportId;
-        this.categoryId = categoryId;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public TransportCategory() {
-        super();
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public Integer getTransportId() {
+		return transportId;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setTransportId(Integer transportId) {
+		this.transportId = transportId;
+	}
 
-    public Integer getTransportId() {
-        return transportId;
-    }
+	public Integer getCategoryId() {
+		return categoryId;
+	}
 
-    public void setTransportId(Integer transportId) {
-        this.transportId = transportId;
-    }
-
-    public Integer getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-    }
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
+	}
 
 }
