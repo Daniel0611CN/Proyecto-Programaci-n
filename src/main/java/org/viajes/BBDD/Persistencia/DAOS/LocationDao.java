@@ -8,8 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import persistance.interfaces.IDAO;
-import persistance.models.Location;
+import org.viajes.BBDD.Persistencia.Models.Location;
+import org.viajes.BBDD.Persistencia.Interfaces.IDAO;
 
 public class LocationDao extends BasicDao implements IDAO<Location, Integer> {
 

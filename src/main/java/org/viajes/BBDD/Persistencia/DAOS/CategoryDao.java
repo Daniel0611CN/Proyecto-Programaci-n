@@ -7,8 +7,9 @@ import java.io.FileWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import persistance.interfaces.IDAO;
-import persistance.models.Category;
+
+import org.viajes.BBDD.Persistencia.Models.Category;
+import org.viajes.BBDD.Persistencia.Interfaces.IDAO;
 
 public class CategoryDao extends BasicDao implements IDAO<Category, Integer> {
 

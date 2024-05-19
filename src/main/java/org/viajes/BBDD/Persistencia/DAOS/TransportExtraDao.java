@@ -8,8 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import persistance.interfaces.IDAO;
-import persistance.models.TransportExtra;
+import org.viajes.BBDD.Persistencia.Models.TransportExtra;
+import org.viajes.BBDD.Persistencia.Interfaces.IDAO;
 
 public class TransportExtraDao extends BasicDao implements IDAO<TransportExtra, Integer> {
 

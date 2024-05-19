@@ -1,4 +1,4 @@
-create table registerUser(
+create table if not exists registerUser(
 id int AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(50),
 surname VARCHAR(50),

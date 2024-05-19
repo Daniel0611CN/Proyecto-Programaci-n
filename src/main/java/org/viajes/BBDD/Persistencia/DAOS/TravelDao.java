@@ -8,8 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import persistance.interfaces.IDAO;
-import persistance.models.Travel;
+import org.viajes.BBDD.Persistencia.Models.Travel;
+import org.viajes.BBDD.Persistencia.Interfaces.IDAO;
 
 public class TravelDao extends BasicDao implements IDAO<Travel, Integer> {
 

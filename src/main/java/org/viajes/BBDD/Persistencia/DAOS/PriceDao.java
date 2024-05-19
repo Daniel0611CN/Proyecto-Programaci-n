@@ -7,8 +7,9 @@ import java.io.FileWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import persistance.interfaces.IDAO;
-import persistance.models.Price;
+
+import org.viajes.BBDD.Persistencia.Models.Price;
+import org.viajes.BBDD.Persistencia.Interfaces.IDAO;
 
 public class PriceDao extends BasicDao implements IDAO<Price, Integer> {
 

@@ -1,4 +1,4 @@
-package persistance.interfaces;
+package org.viajes.BBDD.Persistencia.Interfaces;
 
 public interface IDAO<T, K>{
 

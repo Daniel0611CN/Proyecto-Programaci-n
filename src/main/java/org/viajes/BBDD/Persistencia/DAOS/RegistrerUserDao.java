@@ -7,8 +7,9 @@ import java.io.FileWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import persistance.interfaces.IDAO;
-import persistance.models.RegisterUser;
+
+import org.viajes.BBDD.Persistencia.Models.RegisterUser;
+import org.viajes.BBDD.Persistencia.Interfaces.IDAO;
 
 public class RegistrerUserDao extends BasicDao implements IDAO<RegisterUser, Integer> {
 
@@ -39,8 +40,8 @@ public class RegistrerUserDao extends BasicDao implements IDAO<RegisterUser, Int
 				user.setTelephone(item[4]);
 				user.setPassword(item[5]);
 							
-				if(item[0] != "null") {
-					user.setId(Integer.getInteger(item[0]));	
+				if(item[0].length() > 0) {
+					user.setId(Integer.getInteger(item[0]));
 				} else {
 					user.setId(this.getIdFromBD("registeruser"));
 				}
@@ -59,15 +60,13 @@ public class RegistrerUserDao extends BasicDao implements IDAO<RegisterUser, Int
 	public boolean insertOne(String fileName) throws Exception {
 		boolean result = false;
 		RegisterUser user = new RegisterUser();
-		this.connect();
 		
 		if (fileName != null) {		
 			String sql="INSERT INTO registerUser (id, name, surname, email, telephone, password) VALUES(?, ? ,?,  ?, ?, ?)";
 			PreparedStatement sentence;
 			try {
-				this.connect();
 				user = this.readItemFromFile(fileName);
-				
+				this.connect();
 				sentence = connection.prepareStatement(sql);
 				sentence.setInt(1, user.getId());
 				sentence.setString(2, user.getName());
@@ -291,19 +290,19 @@ public class RegistrerUserDao extends BasicDao implements IDAO<RegisterUser, Int
 					line = in.readLine();
 					cont++;
 				}
-				
+
 				userName = item[1];
 				userPassword = item[2];
 
 				String sql="Select count(*) as total from registerUser WHERE name = ? and password = ?";
 				this.connect();
-				
+
 				sentence = connection.prepareStatement(sql);
 				sentence.setString(1, userName);
 				sentence.setString(2, userPassword);
 				resultSet = sentence.executeQuery();
-				
-				if (resultSet.next()) 	
+
+				if (resultSet.next())
 		        	result = resultSet.getInt("total") > 0;
 		        	
 			} catch (Exception e) {

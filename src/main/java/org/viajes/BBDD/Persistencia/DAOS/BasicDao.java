@@ -59,7 +59,7 @@ public class BasicDao {
 		String linea = null;
 		BufferedReader in = null;
 		try {
-			in = new BufferedReader (new FileReader("C:\\Users\\danic\\IdeaProjects\\Proyecto\\src\\main\\java\\org\\viajes\\BBDD\\bdFiles\\login.txt"));
+			in = new BufferedReader (new FileReader("src/main/java/org/viajes/BBDD/bdFiles/login.txt"));
 			linea = in.readLine(); 
 			if(linea != null)
 				this.userName = linea;
@@ -91,16 +91,17 @@ public class BasicDao {
 
 		if (fileName != null) {
 			try {
-				in = new BufferedReader (new FileReader(fileName)); 
+				this.connect();
+				in = new BufferedReader (new FileReader(fileName));
 				line = in.readLine(); 
 				
 				while(line!=null) {
-					query += line;
+					query = query + line;
+					line = in.readLine();
 				}
 				
 				if(query.length() > 0) {
 					PreparedStatement sentence = connection.prepareStatement(query);
-					
 					result = sentence.execute();
 				}
 	
@@ -152,7 +153,7 @@ public class BasicDao {
 			query = this.connection.createStatement();
 			ResultSet rs = query.executeQuery(sql);
 			while (rs.next()) {
-				result=rs.getInt("maxId");
+				result=rs.getInt("maxId")+1;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

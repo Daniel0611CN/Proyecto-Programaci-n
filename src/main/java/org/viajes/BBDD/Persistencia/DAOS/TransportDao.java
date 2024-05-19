@@ -7,8 +7,9 @@ import java.io.FileWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import persistance.interfaces.IDAO;
-import persistance.models.Transport;
+
+import org.viajes.BBDD.Persistencia.Models.Transport;
+import org.viajes.BBDD.Persistencia.Interfaces.IDAO;
 
 public class TransportDao extends BasicDao implements IDAO<Transport, Integer> {
 

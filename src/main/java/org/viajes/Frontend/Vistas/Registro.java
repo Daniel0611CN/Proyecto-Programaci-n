@@ -4,9 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.IOException;
+
+import org.viajes.BBDD.Persistencia.Models.RegisterUser;
+import org.viajes.Backend.Clases.registerUserController;
+import org.viajes.Frontend.Ficheros.EscribirFichero;
 
 public class Registro extends JFrame {
     //Ponemos los atributos
@@ -14,7 +16,7 @@ public class Registro extends JFrame {
     private JTextField txtId;
     private JTextField txtNombre;
     private JTextField txtApellido;
-    private JTextField txtFechaNacimiento;
+    private JPasswordField txtContraseña;
     private JTextField txtEmail;
     private JTextField txtTelefono;
     private JButton btnRegistrar;
@@ -34,19 +36,17 @@ public class Registro extends JFrame {
     private void initComponents() {
 
         //Valores del usuario
-        JLabel lblId = new JLabel("ID:");
         JLabel lblNombre = new JLabel("Nombre:");
         JLabel lblApellido = new JLabel("Apellido:");
-        JLabel lblFechaNacimiento = new JLabel("Fecha de Nacimiento (dd-MM-yyyy):");
         JLabel lblEmail = new JLabel("Email:");
         JLabel lblTelefono = new JLabel("Teléfono:");
+        JLabel lblContraseña = new JLabel("Contraseña:");
 
-        txtId = new JTextField(15);
         txtNombre = new JTextField(15);
         txtApellido = new JTextField(15);
-        txtFechaNacimiento = new JTextField(15);
         txtEmail = new JTextField(15);
         txtTelefono = new JTextField(15);
+        txtContraseña = new JPasswordField(15);
         btnRegistrar = new JButton("Registrar");
         btnIniciarSesion = new JButton("¿Ya te habías registrado? Inicia sesión");
 
@@ -72,13 +72,6 @@ public class Registro extends JFrame {
         gbc.insets = new Insets(5, 5, 5, 5);
 
         gbc.gridx = 0;
-        gbc.gridy = 0;
-        add(lblId, gbc);
-
-        gbc.gridx = 1;
-        add(txtId, gbc);
-
-        gbc.gridx = 0;
         gbc.gridy = 1;
         add(lblNombre, gbc);
 
@@ -94,10 +87,10 @@ public class Registro extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy = 3;
-        add(lblFechaNacimiento, gbc);
+        add(lblContraseña, gbc);
 
         gbc.gridx = 1;
-        add(txtFechaNacimiento, gbc);
+        add(txtContraseña, gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 4;
@@ -122,55 +115,37 @@ public class Registro extends JFrame {
         add(btnIniciarSesion, gbc);
     }
 
-    private void registrarUsuario() {
-        int id = Integer.parseInt(txtId.getText());
+    public void registrarUsuario() {
         String nombre = txtNombre.getText();
         String apellido = txtApellido.getText();
-        String fechaNacimientoStr = txtFechaNacimiento.getText();
         String email = txtEmail.getText();
         String telefono = txtTelefono.getText();
-
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        Date fechaNacimiento = null;
+        String contraseña = txtContraseña.getText();
         try {
-            fechaNacimiento = sdf.parse(fechaNacimientoStr);
-        } catch (ParseException e) {
-            JOptionPane.showMessageDialog(this, "Formato de fecha no válido. Debe ser dd-MM-yyyy.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
+            if (nombre.length()>0 && apellido.length()>0 && email.length()>0 && telefono.length()>0 && contraseña.length()>0) {
+                RegisterUser registerUser = new RegisterUser();
+                registerUser.setId(null);
+                registerUser.setName(nombre);
+                registerUser.setSurname(apellido);
+                registerUser.setEmail(email);
+                registerUser.setTelephone(telefono);
+                registerUser.setPassword(contraseña);
+                JOptionPane.showMessageDialog(this, "Usuario " + nombre + " con contraseña " + contraseña + " registrado correctamente");
+                new EscribirFichero().writeFileRegisterUser(registerUser);
+                new registerUserController().registerUser("src/main/java/org/viajes/Frontend/Informacion/transportes.txt");
+                dispose();
+            } else if (nombre.length()==0 || apellido.length()==0 || email.length()==0 || telefono.length()==0 || contraseña.length()==0) {
+                JOptionPane.showMessageDialog(this, "Debes introducir todos los datos");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
-
-        // Enseñamos un mensaje de que el usuario se ha registrado correctamente
-        JOptionPane.showMessageDialog(this, "Usuario " + nombre + " " + apellido + " registrado correctamente");
     }
 
     private void iniciarSesion() {
         JOptionPane.showMessageDialog(this, "Redirigiendo a la ventana de inicio de sesión...");
         new InicioSesion().setVisible(true); // Asegúrate de tener una clase VentanaLogin
         dispose(); // Cierra la ventana de registro
-    }
-
-    private boolean comprobarCampos() {
-        boolean esValido=true;
-        //Comprobamos que los datos se encuentren. Para ello, se lo mandamos al controlador
-        if (!txtId.toString().isEmpty()) {
-            String infoEnviar = "Id,";
-        } else if (!txtNombre.getText().isEmpty()) {
-            String infoEnviar = "Name,";
-        } else if (!txtApellido.getText().isEmpty()) {
-            String infoEnviar = "Surname,";
-        } else if (!txtFechaNacimiento.getText().isEmpty()) {
-            String infoEnviar = "Bithday";
-        } else if (!txtEmail.getText().isEmpty()) {
-            String infoEnviar = "Email,";
-        } else if (!txtTelefono.getText().isEmpty()) {
-            String infoEnviar = "Phone,";
-
-        } else {
-            esValido=false;
-            JOptionPane.showMessageDialog(frame, "Debes introducir los datos correctos");
-        }
-        return esValido && true;
-
     }
 
     public static void main(String[] args) {
@@ -180,7 +155,6 @@ public class Registro extends JFrame {
             }
         });
     }
-
 
     private void registrar() {
         // Redirigir a la ventana de registro

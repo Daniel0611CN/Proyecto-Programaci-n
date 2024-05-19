@@ -1106,7 +1106,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb3_spanish2_ci</CollationName>
     </schema>
     <schema id="315" parent="1" name="traveldata">
-      <LastIntrospectionLocalTimestamp>2024-05-19.10:18:39</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-19.10:31:13</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="316" parent="1" name="Daniel">

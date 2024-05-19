@@ -1,4 +1,4 @@
-package persistance.models;
+package org.viajes.BBDD.Persistencia.Models;
 
 public class Extra {
 	private Integer id;

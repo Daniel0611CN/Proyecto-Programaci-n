@@ -7,8 +7,9 @@ import java.io.FileWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import persistance.interfaces.IDAO;
-import persistance.models.Extra;
+
+import org.viajes.BBDD.Persistencia.Models.Extra;
+import org.viajes.BBDD.Persistencia.Interfaces.IDAO;
 
 public class ExtraDao extends BasicDao implements IDAO<Extra, Integer>{
 
