@@ -8,7 +8,7 @@ import java.io.*;
 public class registerUserController {
 
     public void registerUser(String fileName) throws IOException {
-        String texto = "";
+
         BufferedReader br = null;
         try {
             int cont = 0;

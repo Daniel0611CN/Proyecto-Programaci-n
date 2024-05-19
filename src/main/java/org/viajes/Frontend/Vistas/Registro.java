@@ -4,10 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 
 import org.viajes.BBDD.Persistencia.Models.RegisterUser;
 import org.viajes.Backend.Clases.registerUserController;
+import org.viajes.Backend.Ficheros.categoryController;
 import org.viajes.Frontend.Ficheros.EscribirFichero;
 
 public class Registro extends JFrame {
@@ -134,6 +134,8 @@ public class Registro extends JFrame {
                 new EscribirFichero().writeFileRegisterUser(registerUser);
                 new registerUserController().registerUser("src/main/java/org/viajes/Frontend/Informacion/transportes.txt");
                 dispose();
+                new categoryController().chargeCategoryTable("src/main/java/org/viajes/Frontend/Informacion/categories.txt");
+                new categoryController().chargeCategoryTable("src/main/java/org/viajes/Frontend/Informacion/transports.txt");
             } else if (nombre.length()==0 || apellido.length()==0 || email.length()==0 || telefono.length()==0 || contraseña.length()==0) {
                 JOptionPane.showMessageDialog(this, "Debes introducir todos los datos");
             }

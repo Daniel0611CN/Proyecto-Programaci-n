@@ -139,6 +139,7 @@ public class Principal extends JFrame {
         gridBox.gridx = 0;
         gridBox.gridy = 1;
 
+        comboBox1.addItem("Seleccione el tipo de transporte");
         comboBox1.addItem("Avión");
         comboBox1.addItem("Tren");
         comboBox1.addItem("Barco");

@@ -1,6 +1,4 @@
 package org.viajes.Backend.Ficheros;
 
-public class inicioReader {
-
-
+public class travelController {
 }
