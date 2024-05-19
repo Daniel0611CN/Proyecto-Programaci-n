@@ -51,8 +51,8 @@ public class PriceDao extends BasicDao implements IDAO<Price, Integer> {
 				price.setPlanePrice(Double.valueOf(item[3]));
 				price.setTrainPrice(Double.valueOf(item[4]));
 				price.setBoatPrice(Double.valueOf(item[5]));
-			
-				if(item[0] != "null") {
+
+				if(item[0].length() > 0) {
 					price.setId(Integer.getInteger(item[0]));	
 				} else {
 					price.setId(this.getIdFromBD("price"));

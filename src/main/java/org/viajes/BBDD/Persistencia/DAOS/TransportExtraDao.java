@@ -48,8 +48,8 @@ public class TransportExtraDao extends BasicDao implements IDAO<TransportExtra, 
 
 				transportExtra.setTransportId(Integer.getInteger(item[1]));
 				transportExtra.setExtraId(Integer.getInteger(item[2]));
-			
-				if(item[0] != "null") {
+
+				if(item[0].length() > 0) {
 					transportExtra.setId(Integer.getInteger(item[0]));	
 				} else {
 					transportExtra.setId(this.getIdFromBD("transportextra"));

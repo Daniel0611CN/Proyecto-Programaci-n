@@ -67,16 +67,18 @@ public class RegistrerUserDao extends BasicDao implements IDAO<RegisterUser, Int
 			try {
 				user = this.readItemFromFile(fileName);
 				this.connect();
-				sentence = connection.prepareStatement(sql);
-				sentence.setInt(1, user.getId());
-				sentence.setString(2, user.getName());
-				sentence.setString(3, user.getSurname());
-				sentence.setString(4, user.getEmail());
-				sentence.setString(5, user.getTelephone());
-				sentence.setString(6, user.getPassword());
-	
-				sentence.executeUpdate();
-				result = true;
+				if(!this.existUserName(user.getName())) {
+					sentence = connection.prepareStatement(sql);
+					sentence.setInt(1, user.getId());
+					sentence.setString(2, user.getName());
+					sentence.setString(3, user.getSurname());
+					sentence.setString(4, user.getEmail());
+					sentence.setString(5, user.getTelephone());
+					sentence.setString(6, user.getPassword());
+
+					sentence.executeUpdate();
+					result = true;
+				}
 			} catch (SQLException e) {
 				throw new Exception(e);
 			} finally {
@@ -321,6 +323,35 @@ public class RegistrerUserDao extends BasicDao implements IDAO<RegisterUser, Int
 		}
 		
 		return result;		
+	}
+
+	boolean existUserName(String userName) throws Exception {
+		boolean result = false;
+		ResultSet resultSet = null;
+		PreparedStatement sentence = null;
+
+		try {
+			this.connect();
+			String sql="Select count(*) as total from registerUser WHERE name = ? ";
+
+			sentence = connection.prepareStatement(sql);
+			sentence.setString(1, userName);
+			resultSet = sentence.executeQuery();
+
+			if (resultSet.next())
+				result = resultSet.getInt("total") > 0;
+
+		} catch (Exception e) {
+			throw new Exception(e);
+		} finally {
+			try {
+				this.closeConnection();
+			} catch (SQLException e) {
+				throw new Exception(e);
+			}
+		}
+
+		return result;
 	}
 	
 }

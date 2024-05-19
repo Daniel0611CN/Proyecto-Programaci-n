@@ -48,8 +48,8 @@ public class LocationDao extends BasicDao implements IDAO<Location, Integer> {
 				
 				location.setName(item[1]);
 				location.setCountry(item[2]);
-			
-				if(item[0] != "null") {
+
+				if(item[0].length() > 0) {
 					location.setId(Integer.getInteger(item[0]));	
 				} else {
 					location.setId(this.getIdFromBD("location"));

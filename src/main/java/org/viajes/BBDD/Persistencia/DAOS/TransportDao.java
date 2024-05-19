@@ -47,8 +47,8 @@ public class TransportDao extends BasicDao implements IDAO<Transport, Integer> {
 				}
 				
 				transport.setName(item[1]);
-			
-				if(item[0] != "null") {
+
+				if(item[0].length() > 0) {
 					transport.setId(Integer.getInteger(item[0]));	
 				} else {
 					transport.setId(this.getIdFromBD("transport"));

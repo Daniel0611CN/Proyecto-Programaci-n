@@ -48,8 +48,8 @@ public class CategoryDao extends BasicDao implements IDAO<Category, Integer> {
 				
 				category.setName(item[1]);
 				category.setIncrement(Double.valueOf(item[2]));
-			
-				if(item[0] != "null") {
+
+				if(item[0].length() > 0) {
 					category.setId(Integer.getInteger(item[0]));	
 				} else {
 					category.setId(this.getIdFromBD("category"));

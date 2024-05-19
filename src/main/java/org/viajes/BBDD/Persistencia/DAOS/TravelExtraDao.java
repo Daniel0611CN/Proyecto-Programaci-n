@@ -48,8 +48,8 @@ public class TravelExtraDao extends BasicDao implements IDAO<TravelExtra, Intege
 				
 				travelExtra.setExtraId(Integer.getInteger(item[1]));
 				travelExtra.setTravelId(Integer.getInteger(item[2]));
-			
-				if(item[0] != "null") {
+
+				if(item[0].length() > 0) {
 					travelExtra.setId(Integer.getInteger(item[0]));	
 				} else {
 					travelExtra.setId(this.getIdFromBD("travelextra"));

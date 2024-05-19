@@ -48,8 +48,8 @@ public class ExtraDao extends BasicDao implements IDAO<Extra, Integer>{
 				
 				extra.setName(item[1]);
 				extra.setPrice(Double.valueOf(item[2]));
-			
-				if(item[0] != "null") {
+
+				if(item[0].length() > 0) {
 					extra.setId(Integer.getInteger(item[0]));	
 				} else {
 					extra.setId(this.getIdFromBD("extra"));

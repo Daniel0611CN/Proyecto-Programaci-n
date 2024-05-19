@@ -48,8 +48,8 @@ public class TransportCategoryDao extends BasicDao implements IDAO<TransportCate
 
 				transportCategory.setTransportId(Integer.getInteger(item[1]));
 				transportCategory.setCategoryId(Integer.getInteger(item[2]));
-			
-				if(item[0] != "null") {
+
+				if(item[0].length() > 0) {
 					transportCategory.setId(Integer.getInteger(item[0]));	
 				} else {
 					transportCategory.setId(this.getIdFromBD("transportcategory"));

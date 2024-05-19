@@ -54,8 +54,8 @@ public class TravelDao extends BasicDao implements IDAO<Travel, Integer> {
 				travel.setCategoryId(Integer.getInteger(itemTravel[6]));
 				travel.setArrivalLocationId(Integer.getInteger(itemTravel[7]));
 				travel.setDepartureLocationId(Integer.getInteger(itemTravel[8]));
-			
-				if(itemTravel[0] != "null") {
+
+				if(itemTravel[0].length() > 0) {
 					travel.setId(Integer.getInteger(itemTravel[0]));	
 				} else {
 					travel.setId(this.getIdFromBD("travel"));
