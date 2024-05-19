@@ -71,7 +71,7 @@ public class ExtraDao extends BasicDao implements IDAO<Extra, Integer>{
 		Extra extra = null;
 
 		if (fileName != null) {		
-			String sql="INSERT INTO extra (id, name, price) VALUES(?, ? ,? )";
+			String sql="INSERT INTO extra (id, name, price) VALUES(?, ? ,? ) ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				this.connect();

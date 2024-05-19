@@ -71,7 +71,7 @@ public class TravelExtraDao extends BasicDao implements IDAO<TravelExtra, Intege
 		TravelExtra travelExtra = null;
 		
 		if (fileName != null) {		
-			String sql="INSERT INTO travelextra (id, extraId, travelId) VALUES(?, ? ,? )";
+			String sql="INSERT INTO travelextra (id, extraId, travelId) VALUES(?, ? ,? ) ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				this.connect();

@@ -71,7 +71,7 @@ public class TransportExtraDao extends BasicDao implements IDAO<TransportExtra, 
 		TransportExtra transportExtra = null;
 		
 		if (fileName != null) {		
-			String sql="INSERT INTO transportExtra (id, transportId, extraId) VALUES(?, ? ,? )";
+			String sql="INSERT INTO transportExtra (id, transportId, extraId) VALUES(?, ? ,? ) ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				this.connect();

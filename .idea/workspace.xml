@@ -10,8 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35c0b6b4-5474-4bdf-9cfd-f9c86a9656f0" name="Changes" comment="Commit Dani">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d417f6d9-0c0b-4d6c-b5a4-08d02ff7e8f5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d417f6d9-0c0b-4d6c-b5a4-08d02ff7e8f5/storage_v2/_src_/schema/traveldata.xFGsKA.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/categoryInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/extraInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/locationInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/priceInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/registerUserInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/transportCategoryInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/transportExtraInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/transportInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/travelExtraInitialData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/travelInitialData.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/CategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/CategoryDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/ExtraDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/ExtraDao.java" afterDir="false" />
@@ -23,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/TransportExtraDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/TransportExtraDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/TravelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/TravelDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/TravelExtraDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/Persistencia/DAOS/TravelExtraDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/viajes/BBDD/bdFiles/datos TMP.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

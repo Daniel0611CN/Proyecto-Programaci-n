@@ -74,7 +74,7 @@ public class PriceDao extends BasicDao implements IDAO<Price, Integer> {
 		Price price = null;
 		
 		if (fileName != null) {		
-			String sql="INSERT INTO price VALUES(?, ? ,?, ?, ?, ? )";
+			String sql="INSERT INTO price VALUES(?, ? ,?, ?, ?, ? ) ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				this.connect();

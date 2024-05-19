@@ -71,7 +71,7 @@ public class LocationDao extends BasicDao implements IDAO<Location, Integer> {
 		Location location = null;
 		
 		if (fileName != null) {		
-			String sql="INSERT INTO location (id, name, country) VALUES(?, ? ,? )";
+			String sql="INSERT INTO location (id, name, country) VALUES(?, ? ,? )  ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				this.connect();

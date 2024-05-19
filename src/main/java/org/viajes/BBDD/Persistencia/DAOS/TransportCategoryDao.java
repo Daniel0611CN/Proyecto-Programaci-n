@@ -71,7 +71,7 @@ public class TransportCategoryDao extends BasicDao implements IDAO<TransportCate
 		TransportCategory transportCategory = null;
 		
 		if (fileName != null) {		
-			String sql="INSERT INTO transportcategory (id, transportId, categoryId) VALUES(?, ? ,? )";
+			String sql="INSERT INTO transportcategory (id, transportId, categoryId) VALUES(?, ? ,? ) ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				this.connect();

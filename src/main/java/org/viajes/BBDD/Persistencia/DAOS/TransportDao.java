@@ -70,7 +70,7 @@ public class TransportDao extends BasicDao implements IDAO<Transport, Integer> {
 		Transport transport = null;
 		
 		if (fileName != null) {		
-			String sql="INSERT INTO transport (id, name) VALUES(? ,? )";
+			String sql="INSERT INTO transport (id, name) VALUES(? ,? ) ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				this.connect();

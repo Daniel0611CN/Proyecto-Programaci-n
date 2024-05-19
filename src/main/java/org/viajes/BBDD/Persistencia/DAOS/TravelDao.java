@@ -81,7 +81,7 @@ public class TravelDao extends BasicDao implements IDAO<Travel, Integer> {
 			try {
 				this.connect();
 				PreparedStatement sentence;
-				String sql="INSERT INTO travel (id, arrivalDate, departureDate, numberPassengers, userId, price, categoryId, arrivalLocationId, departureLocationId) VALUES(? ,?, ?, ?, ?, ?, ?, ?, ?)";
+				String sql="INSERT INTO travel (id, arrivalDate, departureDate, numberPassengers, userId, price, categoryId, arrivalLocationId, departureLocationId) VALUES(? ,?, ?, ?, ?, ?, ?, ?, ?)  ON DUPLICATE KEY UPDATE id=id";
 				
 				travel = this.readItemFromFile(fileName);
 				

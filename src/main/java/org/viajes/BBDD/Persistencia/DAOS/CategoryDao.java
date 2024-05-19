@@ -71,7 +71,7 @@ public class CategoryDao extends BasicDao implements IDAO<Category, Integer> {
 		Category category = null;
 		
 		if (fileName != null) {		
-			String sql="INSERT INTO category (id, name, increment) VALUES(?, ? ,? )";
+			String sql="INSERT INTO category (id, name, increment) VALUES(?, ? ,? ) ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				this.connect();

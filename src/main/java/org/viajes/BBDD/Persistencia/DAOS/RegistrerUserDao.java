@@ -62,7 +62,7 @@ public class RegistrerUserDao extends BasicDao implements IDAO<RegisterUser, Int
 		RegisterUser user = new RegisterUser();
 		
 		if (fileName != null) {		
-			String sql="INSERT INTO registerUser (id, name, surname, email, telephone, password) VALUES(?, ? ,?,  ?, ?, ?)";
+			String sql="INSERT INTO registerUser (id, name, surname, email, telephone, password) VALUES(?, ? ,?,  ?, ?, ?)  ON DUPLICATE KEY UPDATE id=id";
 			PreparedStatement sentence;
 			try {
 				user = this.readItemFromFile(fileName);

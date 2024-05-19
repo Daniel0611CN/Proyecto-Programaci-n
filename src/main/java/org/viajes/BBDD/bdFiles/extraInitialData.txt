@@ -1,0 +1,27 @@
+1
+Asiento extra
+40.00
+2
+Mascota en cabina
+50.00
+3
+Maleta facturada
+40.00
+4
+Salón y terraza privados
+100.00
+5
+Butacas extra-comodidad
+80.00
+6
+Zona Premium mascotas
+60.00
+7
+Asiento XL confort
+10.00
+8
+Mascotas
+10.00
+9
+Menú Premium
+25.00
